@@ -1,5 +1,31 @@
 <template>
-    
+    <nav class="navbar container" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/">
+                <strong class="is-size-4">Pottery Notebook</strong>
+            </a>
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div id="navbar" class="navbar-menu">
+            <div class="navbar-start">
+                <router-link to="/" class="navbar-item">Home</router-link>
+                <router-link to="/about" class="navbar-item">About</router-link>
+            </div>
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="button is-dark">
+                            <strong>Sign In</strong>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
 </template>
 
 <script>
@@ -8,6 +34,17 @@
     }
 </script>
 
-<style scoped>
-
+<style lang="scss" scoped>
+    nav {
+        margin-top: 25px;
+        margin-bottom: 30px;
+    }
+    a {
+        font-weight: bold;
+        color: #2c3e50;
+        &.router-link-exact-active {
+            color: black;
+            font-style: italic;
+        }
+    }
 </style>

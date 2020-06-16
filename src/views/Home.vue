@@ -15,13 +15,16 @@
         </div>
       </div>
     </section>
+    <PotteryList />
   </div>
 </template>
 
 <script>
+  import PotteryList from "@/components/PotteryList";
   export default {
     name: 'home',
     components: {
+      PotteryList
     }
   }
 </script>
