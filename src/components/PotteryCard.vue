@@ -2,9 +2,9 @@
     <div class="pottery-card">
         <div class="card">
             <div class="card-content">
-                <h2 class="is-size-4 has-text-weight-bold">Piece Title</h2>
-                <small class="posted-date">Posted On:</small>
-                <span>Studio Location:</span>
+                <h2 class="is-size-4 has-text-weight-bold">{{ pot.name }}</h2>
+                <small class="posted-date">{{ pot.date }}</small>
+                <span>{{ pot.location }}</span>
             </div>
         </div>
     </div>
@@ -12,7 +12,10 @@
 
 <script>
     export default {
-        name: "PotteryCard"
+        name: "PotteryCard",
+        props: [
+            'pot'
+        ]
     }
 </script>
 
