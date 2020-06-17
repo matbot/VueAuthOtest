@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import { authGuard } from "@/auth/authGuard";
 
 Vue.use(VueRouter);
 
@@ -21,7 +22,8 @@ Vue.use(VueRouter);
   {
     path: '/pottery/:id',
     name: 'PotterySingle',
-    component: () => import('../views/PotterySingle.vue')
+    component: () => import('../views/PotterySingle.vue'),
+    beforeEnter: authGuard
   }
 ];
 
