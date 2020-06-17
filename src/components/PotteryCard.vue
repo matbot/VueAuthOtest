@@ -1,6 +1,11 @@
 <template>
     <div class="pottery-card">
         <div class="card">
+            <div class="card-image">
+                <figure class="image is-2by1">
+                    <img :src="pot.featuredImage" :alt="pot.name" />
+                </figure>
+            </div>
             <div class="card-content">
                 <h2 class="is-size-4 has-text-weight-bold">{{ pot.name }}</h2>
                 <small class="posted-date">{{ pot.date }}</small>
@@ -21,7 +26,6 @@
 
 <style lang="scss" scoped>
     .card {
-        background-image: url("https://cdn3.volusion.com/jaqfj.hbtfl/v/vspfiles/photos/11-03130HH-2.jpg");
         height: 200px;
         background-position: center;
         background-size: cover;
